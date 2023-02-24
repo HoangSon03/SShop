@@ -2,8 +2,8 @@ import React from "react";
 import product1 from "../assets/products/shopping.jpg";
 
 export const Contact = () => {
-  const clearContact = () => {
-    console.log("clear");
+  const clearContact = (e) => {
+    e.preventDefault();
   };
   return (
     <div className="contact">
@@ -26,7 +26,7 @@ export const Contact = () => {
             name="message"
             required
           ></textarea>
-          <button  type="submit"> Send Message</button>
+          <button onClick={clearContact} type="submit"> Send Message</button>
         </form>
       </div>
     </div>
